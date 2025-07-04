@@ -786,6 +786,16 @@ func (t *Table) GetColumnCount() int {
 	return t.content.GetColumnCount()
 }
 
+// GetVisibleRowCount returns the number of visible rows the last time the table was drawn
+func (t *Table) GetVisibleRowCount() int {
+	return t.visibleRows
+}
+
+// GetVisibleColumnCount returns the number of visible rows the last time the table was drawn
+func (t *Table) GetVisibleColumnCount() int {
+	return len(t.visibleColumnIndices)
+}
+
 // CellAt returns the row and column located at the given screen coordinates.
 // Each returned value may be negative if there is no row and/or cell. This
 // function will also process coordinates outside the table's inner rectangle so
