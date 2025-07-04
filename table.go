@@ -791,9 +791,9 @@ func (t *Table) GetVisibleRowCount() int {
 	return t.visibleRows
 }
 
-// GetVisibleColumnCount returns the number of visible rows the last time the table was drawn
-func (t *Table) GetVisibleColumnCount() int {
-	return len(t.visibleColumnIndices)
+// GetVisibleColumnIndices returns the indices of visible columns the last time the table was drawn
+func (t *Table) GetVisibleColumnIndices() []int {
+	return t.visibleColumnIndices
 }
 
 // CellAt returns the row and column located at the given screen coordinates.
